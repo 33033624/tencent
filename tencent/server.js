@@ -1,9 +1,9 @@
 var express = require('express');
 var app= express();
 var path = require('path');
-app.use(express.static(path.resolve('public')));
+app.use(express.static(path.resolve('src')));
 app.get('/',function(req,res){
-    res.send('../index.html','utf8')
+    res.send('./src/index.html','utf8')
 });
 
 

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="apple-mobile-web-app-title" content="珠峰培训"/>
+    <link charset="utf-8" type="text/css" rel="stylesheet" href="./css/reset.min.css"/>
+    <link charset="utf-8" type="text/css" rel="stylesheet/less" href="./css/index.less"/>
+    <script charset="utf-8" type="text/javascript">
+        var less = {
+            env: "development",
+            poll: 1000
+        };
+    </script>
+    <script charset="utf-8" type="text/javascript" src="./js/less-2.5.3.min.js"></script>
+    <script charset="utf-8" type="text/javascript">
+        less.watch();
+    </script>
+</head>
+<body>
+
+
+<header class="header">
+    <h1>腾讯体育</h1>
+    <a href="#">NBA</a>
+    <div class="menu"></div>
+    <div class="login">登录</div>
+</header>
+<!--NAV-->
+<nav class="nav">
+    <ul class="clear">
+        <li><a href="#">NBA</a></li>
+        <li><a href="#">CBA</a></li>
+        <li><a href="#">英超</a></li>
+        <li><a href="#">欧冠</a></li>
+        <li><a href="#">亚冠</a></li>
+        <li><a href="#">西甲</a></li>
+        <li><a href="#">德甲</a></li>
+        <li><a href="#">意甲</a></li>
+        <li><a href="#">法甲</a></li>
+        <li><a href="#">中超</a></li>
+        <li><a href="#">NFL</a></li>
+        <li><a href="#">综合</a></li>
+        <li><a href="#">社区</a></li>
+        <li><a href="#">欧洲杯</a></li>
+        <li><a href="#">下载</a></li>
+    </ul>
+</nav>
+<section class="video">
+    <!--只有当VIDEO的 PRELOAD="NONE"的时候 我们设置的POSTER才可以展示-->
+    <video src=http://124.14.5.141/sports.tc.qq.com/k0021tj1mya.mp4?vkey=F3F65812A65EE5EFEE7AC9CAA9B81F72589D3FBDC155842E86B671C4A99F715BA3A779FE40EBE48A8B30BE5D8A247949BFC49F0781C4CA50C18F4F92F32182AD1847EBFA726A5788066C0A643D894B21B19717A347FC3BA7&br=60&platform=2&fmt=auto&level=0&sdtfrom=v3010&ocid=337911724&locid=39ec8e36-445a-4d38-b0e1-2b65dbb1fc23&size=6520037&ocid=2236749228"
+           controls preload="none" poster="img/poster.jpg"></video>
+</section>
+<!--EJS-->
+<script charset="utf-8" type="text/javascript" src="./js/ejs.min.js"></script>
+<section class="match"></section>
+<script charset="utf-8" type="text/template" id="matchTemplate">
+    <div class="top">
+        <div class="left">
+            <img src="<%=matchInfo.leftBadge%>"/>
+            <span><%=matchInfo.leftGoal%></span>
+        </div>
+        <div class="center"><%=matchInfo.startTime).formatTime('{1}月{2}日{3}:{4}'%></div>
+        <div class="right">
+            <span><%=matchInfo.rightGoal%></span>
+            <img src="<%=matchInfo.rightBadge%>"/>
+        </div>
+    </div>
+    <div class="mid"><span class="progress"></span></div>
+    <div class="bot">
+        <div class="left"><%=matchInfo.leftSupport%></div>
+        <div class="center"><%=matchInfo.matchDesc%></div>
+        <div class="right"><%=matchInfo.rightSupport%></div>
+    </div>
+</script>
+
+<section class="videoAlbum">
+    <div>
+    <div class="videoContainer" id="demoScroll">
+        <ul>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+            <li>
+                <div class="imgBlock">
+                    <img src="img/album.jpg" alt=""/><span class="duration">02:32</span>
+                </div>
+                <span>美国111-74阿根廷 杜兰特23分考辛斯两双</span>
+            </li>
+
+        </ul>
+        </div>
+    </div>
+</section>
+
+<section  id="startBox">
+    <h2>数据 <a href="##">更多球队,球员数据</a><span class="go-icon"></span></h2>
+    <ul>
+        <li>111</li><li>总分</li><li>74</li>
+    </ul>
+    <ul>
+        <li>32</li><li>第一节</li><li>74</li>
+    </ul>
+    <ul>
+        <li>111</li><li>第二节</li><li>74</li>
+    </ul>
+    <ul>
+        <li>111</li><li>第三节</li><li>74</li>
+    </ul>
+    <ul>
+        <li>111</li><li>第四节</li><li>74</li>
+    </ul>
+</section>
+
+<section id="relatedThread">
+    <h2>社区</h2>
+    <ul>
+        <li>
+            <h3>【直播互动帖】2016里约奥运会美国男篮热身赛 美国VS阿根廷</h3>
+            <p>法国国家队核心、马竞当家球星格列兹曼与效力于萨克拉门托国王队的NBA球星考辛斯在拉......</p>
+            <div class="postImg">
+                <img src="img/640.jpg" />
+            </div>
+            <div class="posts-from">
+                <p><span>末日钢琴手</span>来自<span>勇士</span></p>
+                <span class="comments"><i><img src="img/icon-comment_689c1a.png"> </i>65</span>
+            </div>
+
+        </li>
+
+        <li>
+        <h3>【直播互动帖】2016里约奥运会美国男篮热身赛 美国VS阿根廷</h3>
+        <p>法国国家队核心、马竞当家球星格列兹曼与效力于萨克拉门托国王队的NBA球星考辛斯在拉......</p>
+        <div class="postImg">
+            <img src="img/640.jpg" />
+            <img src="img/640.jpg" />
+        </div>
+        <div class="posts-from">
+            <p><span>末日钢琴手</span>来自<span>勇士</span></p>
+            <span class="comments"><i><img src="img/icon-comment_689c1a.png"> </i>298</span>
+        </div>
+
+    </li>
+
+        <li>
+            <h3>【直播互动帖】2016里约奥运会美国男篮热身赛 美国VS阿根廷</h3>
+            <p>法国国家队核心、马竞当家球星格列兹曼与效力于萨克拉门托国王队的NBA球星考辛斯在拉......</p>
+            <div class="postImg">
+                <img src="img/640.jpg" />
+                <img src="img/640.jpg" />
+                <img src="img/640.jpg" />
+                <img src="img/640.jpg" />
+            </div>
+            <div class="posts-from">
+                <p><span>末日钢琴手</span>来自<span>勇士</span></p>
+                <span class="comments"><i><img src="img/icon-comment_689c1a.png"> </i>298</span>
+            </div>
+
+        </li>
+    </ul>
+</section>
+
+<div class="download-tip ">
+    <!--<div class="bottom-inner">-->
+        <!--<img src="http://mat1.gtimg.com/sports/sportAppWeb/kbsshare/statics/kbs-logo_cf8381.png">-->
+        <!--<p>-->
+            <!--<strong class="title">查看比赛完整数据</strong>-->
+            <!--<span class="desc">下载腾讯体育</span>-->
+        <!--</p>-->
+        <!--<a class="boss" data-action="推广按钮" data-extra="下载" href="javascript:;" id="downloadBtn">下载</a>-->
+    <!--</div>-->
+</div>
+
+<script charset="utf-8" type="text/javascript" src="./js/zepto.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="./js/iscroll5.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="./js/index.js"></script>
+
+</body>
+</html>
